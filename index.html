@@ -2195,7 +2195,7 @@
   </div>
 
   <!-- Config (external file) -->
- <script src="config.js?v=2"></script>
+  <script src="config.js?v=2"></script>
   <script>
     // ============================================
     // APP ENGINE — LojaFácil
@@ -2246,7 +2246,7 @@
     // LOAD CONFIG FROM SHEETS
     // ============================================
     async function loadConfig() {
-      const res = await fetch(LOJAFACIL.planilha_configuracoes);
+      const res = await fetch(LOJAFACIL.planilha_configuracoes, { credentials: 'omit' });
       const text = await res.text();
       const rows = parseCSV(text);
 
@@ -2351,7 +2351,7 @@
     // LOAD PRODUCTS FROM SHEETS
     // ============================================
     async function loadProducts() {
-      const res = await fetch(LOJAFACIL.planilha_produtos);
+      const res = await fetch(LOJAFACIL.planilha_produtos, { credentials: 'omit' });
       const text = await res.text();
       const rows = parseCSV(text);
 
