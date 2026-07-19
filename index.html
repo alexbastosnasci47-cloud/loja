@@ -2246,7 +2246,7 @@
     // LOAD CONFIG FROM SHEETS
     // ============================================
     async function loadConfig() {
-      const res = await fetch(LOJAFACIL.planilha_configuracoes, { credentials: 'omit' });
+      const res = await fetch(LOJAFACIL.planilha_configuracoes);
       const text = await res.text();
       const rows = parseCSV(text);
 
@@ -2351,7 +2351,7 @@
     // LOAD PRODUCTS FROM SHEETS
     // ============================================
     async function loadProducts() {
-      const res = await fetch(LOJAFACIL.planilha_produtos, { credentials: 'omit' });
+      const res = await fetch(LOJAFACIL.planilha_produtos);
       const text = await res.text();
       const rows = parseCSV(text);
 
